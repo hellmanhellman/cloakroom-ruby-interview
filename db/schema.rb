@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_22_155416) do
+ActiveRecord::Schema.define(version: 2022_08_02_113914) do
 
   create_table "coat_orders", force: :cascade do |t|
     t.integer "coat_id"
     t.string "email"
-    t.boolean "sent", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "status", default: 0
     t.index ["coat_id"], name: "index_coat_orders_on_coat_id"
   end
 
